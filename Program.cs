@@ -10,21 +10,38 @@ namespace fab_series
     {
         static void Main(string[] args)
         {
-            int a = 0;
-            int b = 1;
-            int c = 0;
+            int a = 1;
+            int x = 5;
 
-            Console.WriteLine(a);
-            Console.WriteLine(b);
-
-            for (int i = 0; i <= 8; i++)
+            //mainloop
+            do
             {
-                c = a + b;
-                a = b;
-                b = c;
-                Console.WriteLine(c);
-            }
-            Console.WriteLine();
+                //nested-1
+                int n = x;
+                do
+                {
+                    Console.Write(" ");
+                    n--;
+                } while (1 <= n);
+                //nested-1 end
+
+
+                //nested-2
+                int b = 1;
+                do
+                {
+                    Console.Write(" *");
+                    b++;
+                } while (b <= a);
+                //nested-2 end
+
+
+                Console.WriteLine();
+                a++;
+                x--;
+            } while (a <= 5);
+
+
             Console.ReadKey();
         }
     }
